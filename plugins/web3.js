@@ -16,11 +16,11 @@ export default async function ({store}, inject) {
 
   inject ('web3', web3);
 
-  if (web3! == null) {
+  if (web3 !== null) {
     web3.eth.getAccounts ((error, accounts) => {
       if (error) return;
       let user_account = accounts [0];
-      if (typeof user_account! =='undefined') {
+      if (typeof user_account !=='undefined') {
         store.commit ('setAccount', user_account);
         web3.eth.getBalance (user_account, function (err, balance) {
           if (! err) {
