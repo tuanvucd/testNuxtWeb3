@@ -2,6 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'testWeb3',
+    target: 'static',
     htmlAttrs: {
       lang: 'en'
     },
@@ -22,7 +23,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/web3.js'
+    {src: '~/plugins/web3.js',  mode: 'client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
