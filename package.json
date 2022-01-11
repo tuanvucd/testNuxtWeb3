@@ -1,12 +1,15 @@
 {
   "name": "testWeb3",
   "version": "1.0.0",
+  "homepage": "https://tuanvucd.github.io/testNuxtWeb3/",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "gh:generate": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "gh:push": "git subtree push --prefix dist/ origin gh-pages"
   },
   "dependencies": {
     "core-js": "^3.19.3",
